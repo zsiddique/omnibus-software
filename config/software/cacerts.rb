@@ -25,6 +25,7 @@ relative_path "cacerts-#{version}"
 
 build do
   command "mkdir -p #{install_dir}/embedded/ssl/certs"
-  command "cp cacert.pem #{install_dir}/embedded/ssl/certs/cacert.pem"
+  # cp from the omnibus cache instead of where fetcher tries to put it
+  command "cp cacert.pem #{install_dir}/embedded/ssl/certs/cacert.pem", :cwd => '/var/cache/omnibus/cache'
   command "ln -sf #{install_dir}/embedded/ssl/certs/cacert.pem #{install_dir}/embedded/ssl/cert.pem"
 end
