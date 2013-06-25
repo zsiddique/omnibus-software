@@ -121,6 +121,9 @@ build do
   gem ["install mixlib-shellout",
        "--pre"].join(" "), :env => env
 
+  gem ["install ohai",
+       "--pre"].join(" "), :env => env
+
   gem ["install pkg/chef*.gem",
       "-n #{install_dir}/bin",
       "--no-rdoc --no-ri"].join(" "), :env => env
