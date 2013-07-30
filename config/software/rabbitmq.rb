@@ -16,15 +16,15 @@
 #
 
 name "rabbitmq"
-version "2.7.1"
+version "3.1.1"
 
 dependency "erlang"
 dependency "rsync"
 
-source :url => "http://www.rabbitmq.com/releases/rabbitmq-server/v2.7.1/rabbitmq-server-generic-unix-2.7.1.tar.gz",
-       :md5 => "34a5f9fb6f22e6681092443fcc80324f"
+source :url => "http://www.rabbitmq.com/releases/rabbitmq-server/v3.1.1/rabbitmq-server-generic-unix-3.1.1.tar.gz",
+       :md5 => "59cb86f2675c168f10a2a669894fb2d0"
 
-relative_path "rabbitmq_server-2.7.1"
+relative_path "rabbitmq_server-3.1.1"
 
 build do
   command "mkdir -p #{install_dir}/embedded/service/rabbitmq"
